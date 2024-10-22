@@ -1,0 +1,49 @@
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.timeline {
+    position: relative;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.timeline:before {
+    content: '';
+    top: 0;
+    left: 50%;
+    width: 2px;
+    height: 100%;
+    background-color: #4CAF50;
+    transform: translateX(-50%);
+}
+
+.timeline-item {
+    margin-bottom: 250px;
+    position: relative;
+    height: 150px;
+}
+
+.timeline-item:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -6px;
+    width: 12px;
+    height: 12px;
+    background: #4CAF50; /* green color */
+    border-radius: 50%;
+}
+
+
+.timeline-item .date {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.timeline-item .content {
+    background: #f4f4f4;
+    padding: 10px;
+    border-radius: 15px;
+}
