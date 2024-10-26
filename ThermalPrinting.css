@@ -1,39 +1,43 @@
-﻿/** {
-    font-size: 12px;
-    font-family: 'Times New Roman';
+:root {
+    --font-family: 'Arial', sans-serif;
+    --border-color: #dee2e6; /* Light gray for borders */
+    --text-color: #212529; /* Dark gray for text */
+    --bg-color: #ffffff; /* White background */
+    --hover-bg-color: #f8f9fa; /* Light hover color */
+    --table-header-bg: #007bff; /* Bootstrap primary color */
+    --table-header-text-color: white; /* White text for header */
+}
+
+* {
+    font-size: 14px; /* Increased base font size for better readability */
+    font-family: var(--font-family);
+    box-sizing: border-box;
 }
 
 td,
-th,
-tr,
-table {
-    border-top: 1px solid black;
+th {
+    border-top: 1px solid var(--border-color);
     border-collapse: collapse;
-}*/
+    padding: 8px 12px; /* Padding for cell content */
+}
 
-    td.description,
-    th.description {
-        width: 75px;
-        max-width: 75px;
-    }
+td.description,
+th.description {
+    width: 75px;
+    max-width: 75px;
+}
 
-    td.quantity,
-    th.quantity {
-        width: 40px;
-        max-width: 40px;
-        word-break: break-all;
-    }
-
-    td.price,
-    th.price {
-        width: 40px;
-        max-width: 40px;
-        word-break: break-all;
-    }
+td.quantity,
+th.quantity,
+td.price,
+th.price {
+    width: 40px;
+    max-width: 40px;
+    word-break: break-all; /* Break long words in cells */
+}
 
 .centered {
-    text-align: center;
-    align-content: center;
+    text-align: center; /* Center text */
 }
 
 .ThermalPrintArea {
@@ -42,17 +46,32 @@ table {
 }
 
 img {
-    max-width: inherit;
-    width: inherit;
+    max-width: 100%; /* Ensure images are responsive */
+    height: auto; /* Maintain aspect ratio */
 }
 
+.table {
+    width: 100%; /* Full width tables */
+    margin-bottom: 1rem; /* Space below tables */
+    background-color: var(--bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: 0.25rem; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.table th {
+    background-color: var(--table-header-bg);
+    color: var(--table-header-text-color);
+}
+
+.table tr:hover {
+    background-color: var(--hover-bg-color); /* Highlight on hover */
+}
+
+/* Print styles */
 @media print {
     .hidden-print,
     .hidden-print * {
-        display: none !important;
+        display: none !important; /* Hide elements for print */
     }
-}
-
-{
-    "mode":"full","isActive":false
 }
