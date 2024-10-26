@@ -1,118 +1,116 @@
-﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
-for details on configuring this project to bundle and minify static web assets. */
+/* Global Styles */
+:root {
+    --primary-color: #1b6ec2; /* Primary button color */
+    --primary-hover: #1861ac; /* Primary button hover color */
+    --link-color: #0366d6; /* Link color */
+    --footer-bg-color: #f8f9fa; /* Footer background */
+    --border-color: #e5e5e5; /* Light gray for borders */
+    --box-shadow: rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    --font-size-base: 14px; /* Base font size */
+}
 
+html {
+    font-size: var(--font-size-base);
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px; /* Larger font on wider screens */
+    }
+}
+
+/* Navbar Styles */
 a.navbar-brand {
     white-space: normal;
     text-align: center;
     word-break: break-all;
 }
 
-
-/* Provide sufficient contrast against white background */
-
 a {
-    color: #0366d6;
+    color: var(--link-color);
 }
 
 .btn-primary {
     color: #fff;
-    background-color: #1b6ec2;
-    border-color: #1861ac;
+    background-color: var(--primary-color);
+    border-color: var(--primary-hover);
+    transition: background-color 0.3s, border-color 0.3s; /* Smooth transition */
 }
 
+.btn-primary:hover {
+    background-color: var(--primary-hover); /* Button hover effect */
+}
+
+/* Nav Pill Styles */
 .nav-pills .nav-link.active,
-.nav-pills .show>.nav-link {
+.nav-pills .show > .nav-link {
     color: #fff;
-    background-color: #1b6ec2;
-    border-color: #1861ac;
+    background-color: var(--primary-color);
+    border-color: var(--primary-hover);
 }
 
-
-/* Sticky footer styles
--------------------------------------------------- */
-
-html {
-    font-size: 14px;
-}
-
-@media (min-width: 768px) {
-    html {
-        font-size: 16px;
-    }
-}
-
+/* Border Styles */
 .border-top {
-    border-top: 1px solid #e5e5e5;
+    border-top: 1px solid var(--border-color);
 }
 
 .border-bottom {
-    border-bottom: 1px solid #e5e5e5;
+    border-bottom: 1px solid var(--border-color);
 }
 
 .box-shadow {
-    box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+    box-shadow: 0 .25rem .75rem var(--box-shadow);
 }
 
-button.accept-policy {
-    font-size: 1rem;
-    line-height: inherit;
-}
-
-
-/* Sticky footer styles
--------------------------------------------------- */
-
-html {
-    position: relative;
-    min-height: 100%;
-}
-
+/* Sticky Footer Styles */
 body {
-    /* Margin bottom by footer height */
-    margin-bottom: 60px;
+    margin-bottom: 60px; /* Space for footer */
+    position: relative; /* Ensure footer is positioned correctly */
 }
 
 .footer {
     position: absolute;
     bottom: 0;
     width: 100%;
-    white-space: nowrap;
-    line-height: 60px;
-    /* Vertically center the text there */
+    background-color: var(--footer-bg-color);
+    line-height: 60px; /* Center footer text vertically */
+    text-align: center; /* Center footer text horizontally */
 }
 
+/* Utility Classes */
 .nopadding {
-    padding: 0px 0px 0px 0px;
+    padding: 0 !important;
     margin: 0 !important;
 }
 
 @media print {
-
     .hidden-print,
     .hidden-print * {
-        display: none !important;
+        display: none !important; /* Hide elements in print */
     }
 }
 
-.imgCustom50px {
+/* Image Styles */
+.imgCustom50px,
+.imgCustom150px {
     border: 1px solid #ddd;
     border-radius: 4px;
     padding: 5px;
+    transition: box-shadow 0.3s; /* Smooth hover effect */
+}
+
+.imgCustom50px {
     width: 50px;
 }
 
-.imgCustom50px:hover {
-    box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+.imgCustom150px {
+    width: 150px;
+    border-radius: 10px; /* Different border radius */
 }
 
-.unstyled-button {
-    border: none;
-    padding: 0;
-    background: none;
-}
-
-.swal-wide {
-    width: 950px !important;
+.imgCustom50px:hover,
+.imgCustom150px:hover {
+    box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5); /* Highlight on hover */
 }
 
 .imgCustom {
@@ -120,25 +118,19 @@ body {
     border-radius: 4px;
     padding: 5px;
     width: 50px;
+    transition: box-shadow 0.3s; /* Smooth hover effect */
 }
 
 .imgCustom:hover {
-    box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+    box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5); /* Highlight on hover */
 }
 
+/* Body Public Styles */
 .bodyPublic {
-    margin-left: 40px;
-    margin-right: 40px;
-    margin-top: 10px;
+    margin: 10px 40px; /* Uniform margin */
 }
 
-.imgCustom150px {
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    padding: 0px;
-    width: 150px;
-}
-
-.imgCustom150px:hover {
-    box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+/* SweetAlert Styles */
+.swal-wide {
+    width: 950px !important; /* Custom width for SweetAlert */
 }
