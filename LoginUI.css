@@ -14,7 +14,7 @@ body {
 .btn-info,
 .btn-info.disabled {
     background: #365470;
-    border: 2px solid #b2c59d;
+    border: 2px solid red;
 }
 
 
