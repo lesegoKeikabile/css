@@ -1,49 +1,77 @@
-
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa; /* Light background for contrast */
+    color: #333; /* Darker text for readability */
 }
 
+/* Timeline Container */
 .timeline {
     position: relative;
     max-width: 600px;
-    margin: 0 auto;
+    margin: 20px auto; /* Add some margin for spacing */
+    padding: 20px 0; /* Add padding for a better look */
 }
 
+/* Timeline Line */
 .timeline:before {
     content: '';
     top: 0;
     left: 50%;
     width: 2px;
     height: 100%;
-    background-color: #4CAF50;
+    background-color: #4CAF50; /* Green line */
     transform: translateX(-50%);
 }
 
+/* Timeline Item */
 .timeline-item {
-    margin-bottom: 250px;
+    margin-bottom: 50px; /* Reduce bottom margin for compactness */
     position: relative;
-    height: 150px;
+    height: auto; /* Allow flexibility in height */
 }
 
+/* Circle Indicator */
 .timeline-item:before {
     content: '';
     position: absolute;
     top: 0;
-    left: -6px;
-    width: 12px;
-    height: 12px;
-    background: #4CAF50; /* green color */
+    left: -10px; /* Adjust position for better alignment */
+    width: 20px;
+    height: 20px;
+    background: #4CAF50; /* Green color */
     border-radius: 50%;
+    border: 3px solid #ffffff; /* White border for contrast */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
 
-
+/* Date Style */
 .timeline-item .date {
     font-weight: bold;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
+    font-size: 14px; /* Slightly larger font for emphasis */
+    color: #4CAF50; /* Match the timeline color */
 }
 
+/* Content Style */
 .timeline-item .content {
-    background: #f4f4f4;
-    padding: 10px;
-    border-radius: 15px;
+    background: #ffffff; /* White background for content */
+    padding: 15px; /* Increased padding for comfort */
+    border-radius: 10px; /* Softer corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: background-color 0.3s; /* Smooth background transition */
+}
+
+.timeline-item .content:hover {
+    background-color: #f1f1f1; /* Light hover effect */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .timeline {
+        max-width: 90%; /* Make timeline responsive on smaller screens */
+    }
+
+    .timeline-item:before {
+        left: -12px; /* Adjust circle position on smaller screens */
+    }
 }
