@@ -1,39 +1,35 @@
-﻿@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800&display=swap');
 
 body {
     font-family: 'Montserrat', sans-serif;
-    ;
-    font-size: 13px;
+    font-size: 13px; /* Base font size */
 }
 
 #auth-logo {
     padding: 10% 11%;
-    background: #365470;
+    background-color: #365470; /* Use background-color for clarity */
 }
 
 .btn-info,
 .btn-info.disabled {
-    background: #365470;
-    border: 2px solid red;
+    background-color: #365470; /* Consistent use of background-color */
+    border: 2px solid red; /* Clear border for disabled state */
 }
 
-
 #form-section {
-    background: #ffffff;
+    background-color: #ffffff; /* Consistent use of background-color */
     height: 100vh;
-    padding-left: 0;
-    padding-right: 0;
+    padding: 0; /* Shorthand for padding */
 }
 
 #auth-form {
     max-width: 80%;
-    margin-top: 10%;
-    margin-left: 10%;
-    margin-right: 10%;
+    margin: 10% auto; /* Centering with auto margins */
 }
 
 .imgCustom200pxCircle {
     border: 1px solid #ddd;
     padding: 5px;
     width: 200px;
+    border-radius: 50%; /* To make it circular */
 }
