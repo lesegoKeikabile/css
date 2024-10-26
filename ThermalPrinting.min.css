@@ -1,154 +1,101 @@
+:root {
+    --font-family: 'Arial', sans-serif;
+    --border-color: #e0e0e0; /* Light gray for borders */
+    --header-bg-color: #4caf50; /* Header background color */
+    --header-text-color: #ffffff; /* Header text color */
+    --hover-bg-color: #6cba4d; /* Hover background color */
+    --table-bg-color: #ffffff; /* Default table background */
+    --table-hover-bg-color: #f8f9fa; /* Table hover background */
+}
+
 body {
-    padding-top: 0;
-    padding-bottom: 0
+    padding: 0; /* Remove default padding */
+    font-family: var(--font-family);
+    background-color: #f9f9f9; /* Light background for body */
 }
 
 fieldset {
     margin: 0;
-    border: 1px solid #000;
-    padding: 8px;
-    border-radius: 4px
+    border: 1px solid var(--border-color);
+    padding: 16px; /* Increased padding for a better look */
+    border-radius: 4px;
+    background-color: #ffffff; /* White background for fieldset */
 }
 
 .body-content {
-    padding-left: 15px;
-    padding-right: 15px
+    padding: 0 15px; /* Maintain consistent padding */
 }
 
 .carousel-caption p {
-    font-size: 20px;
-    line-height: 1.4
+    font-size: 1.25rem; /* Larger font size for better visibility */
+    line-height: 1.5; /* Improved line height */
 }
 
 .carousel-inner .item img[src$=".svg"] {
-    width: 100%
+    width: 100%; /* Ensure SVGs are responsive */
 }
 
 #qrCode {
-    margin: 15px
+    margin: 15px; /* Maintain margin */
 }
 
-@media screen and (max-width:767px) {
+@media screen and (max-width: 767px) {
     .carousel-caption {
-        display: none
+        display: none; /* Hide captions on small screens */
     }
 }
 
-.ItemTranTable {
-    font-family: Arial,Helvetica,sans-serif;
-    border-collapse: collapse;
-    width: 100%;
-    border: 1px solid #4caf50
-}
-
-    .ItemTranTable td, #ItemTranTable th {
-        border: 1px solid #4caf50;
-        line-height: 20px;
-        padding-left: 5px
-    }
-
-    .ItemTranTable th {
-        border: 1px solid #808080;
-        padding-top: 1px;
-        padding-bottom: 1px;
-        text-align: left;
-        background-color: #4caf50;
-        color: #fff;
-        line-height: 30px;
-        padding-left: 5px
-    }
-
-    .ItemTranTable tr:nth-child(even) {
-        background-color: #f2f2f2
-    }
-
-    .ItemTranTable tr:hover {
-        background-color: #6cba4d;
-        color: #fff
-    }
-
-    .ItemTranTable a:hover {
-        color: #f00
-    }
-
-    .ItemTranTable td, .ItemTranTable th {
-        font-size: 12px
-    }
-
-.CustomBlueTable {
-    font-family: Arial,Helvetica,sans-serif;
-    border-collapse: collapse;
-    width: 100%;
-    border: 1px solid #0094ff
-}
-
-    .CustomBlueTable td, #CustomBlueTable th {
-        border: 1px solid #0094ff;
-        line-height: 20px;
-        padding-left: 5px
-    }
-
-    .CustomBlueTable th {
-        border: 1px solid #4caf50;
-        padding-top: 1px;
-        padding-bottom: 1px;
-        text-align: left;
-        background-color: #0094ff;
-        color: #fff;
-        line-height: 30px;
-        padding-left: 5px
-    }
-
-    .CustomBlueTable tr:nth-child(even) {
-        background-color: #f2f2f2
-    }
-
-    .CustomBlueTable tr:hover {
-        background-color: #10609a;
-        color: #fff
-    }
-
-    .CustomBlueTable a:hover {
-        color: #f00
-    }
-
-    .CustomBlueTable td, .CustomBlueTable th {
-        font-size: 12px
-    }
-
+.ItemTranTable,
+.CustomBlueTable,
 .PrintInvoiceTable {
-    font-family: Arial,Helvetica,sans-serif;
+    width: 100%; /* Full width for tables */
     border-collapse: collapse;
-    width: 100%;
-    border: 1px solid #4caf50
+    margin-bottom: 1rem; /* Space below tables */
 }
 
-    .PrintInvoiceTable td, #PrintInvoiceTable thth {
-        border: 1px solid #000;
-        padding-left: 5px
-    }
+.ItemTranTable,
+.CustomBlueTable {
+    border: 1px solid var(--header-bg-color); /* Use defined colors */
+}
 
-    .PrintInvoiceTable th {
-        border: 1px solid #808080;
-        padding-left: 5px;
-        text-align: left;
-        background-color: #4caf50;
-        color: #fff
-    }
+.ItemTranTable td,
+.CustomBlueTable td,
+.PrintInvoiceTable td,
+.ItemTranTable th,
+.CustomBlueTable th,
+.PrintInvoiceTable th {
+    border: 1px solid var(--border-color);
+    padding: 10px; /* Increased padding for better spacing */
+    font-size: 14px; /* Slightly larger font size */
+}
 
-    .PrintInvoiceTable tr:nth-child(even) {
-        background-color: #f2f2f2
-    }
+.ItemTranTable th,
+.CustomBlueTable th,
+.PrintInvoiceTable th {
+    background-color: var(--header-bg-color);
+    color: var(--header-text-color);
+    text-align: left;
+}
 
-    .PrintInvoiceTable tr:hover {
-        background-color: #6cba4d
-    }
+.ItemTranTable tr:nth-child(even),
+.CustomBlueTable tr:nth-child(even),
+.PrintInvoiceTable tr:nth-child(even) {
+    background-color: #f9f9f9; /* Light gray for even rows */
+}
 
-    .PrintInvoiceTable td, .PrintInvoiceTable th {
-        font-size: 12px
-    }
+.ItemTranTable tr:hover,
+.CustomBlueTable tr:hover,
+.PrintInvoiceTable tr:hover {
+    background-color: var(--hover-bg-color); /* Highlight on hover */
+}
+
+.ItemTranTable a:hover,
+.CustomBlueTable a:hover,
+.PrintInvoiceTable a:hover {
+    color: #ff0000; /* Red hover effect for links */
+}
 
 .nopadding {
-    padding: 0 0 0 0;
-    margin: 0 !important
+    padding: 0 !important;
+    margin: 0 !important; /* Remove all padding and margin */
 }
