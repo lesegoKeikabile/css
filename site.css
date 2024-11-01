@@ -42,12 +42,7 @@ a {
 }
 
 /* Nav Pill Styles */
-.nav-pills .nav-link.active,
-.nav-pills .show > .nav-link {
-    color: #fff;
-    background-color: var(--primary-color);
-    border-color: var(--primary-hover);
-}
+
 
 /* Border Styles */
 .border-top {
